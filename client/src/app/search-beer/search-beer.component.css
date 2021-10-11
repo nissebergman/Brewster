@@ -1,0 +1,42 @@
+
+#searchContainer
+{
+    overflow: auto;
+    height: 22vw;
+    
+}
+::placeholder {
+    color: rgba(202, 202, 202, 0.705);
+  }
+*:focus
+{
+    outline: none;
+}
+table{
+    width: 40vw;
+    height: 10vw;
+    table-layout: fixed;
+    opacity: 0.95;
+}
+th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type {
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+table img
+{
+    max-width: 2vw;
+    height: auto;
+}
+tr.beerRow:hover {
+    background: whitesmoke;
+}
+td
+{
+    cursor: pointer;
+}
+
+#spinner
+{
+    overflow: hidden;
+    margin-left: 20%;
+}

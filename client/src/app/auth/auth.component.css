@@ -1,0 +1,22 @@
+.auth-flex
+{
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.logoAuth
+{
+    height: 20vw;
+    
+}
+#logoA
+{
+    font-size: 10vw;
+    font-family: "Pirou";
+    text-align: center;
+    line-height: 8vw;
+    margin-top: 5vw;
+    color: whitesmoke;
+}

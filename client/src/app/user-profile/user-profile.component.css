@@ -1,0 +1,19 @@
+.profile-grid 
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 10vw);
+    grid-gap: 15px;
+}
+
+.profile-img
+{
+    height: 100%;
+    width: auto;
+    display: block;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+

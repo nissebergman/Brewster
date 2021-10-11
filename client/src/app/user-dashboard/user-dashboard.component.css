@@ -1,0 +1,15 @@
+#profileImg{
+    height: 10vw;
+    margin-top: 2vw;
+}
+
+p {
+    font-size: 1vw;
+    margin: 1vh;
+}
+
+#user-name{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0.5vh;
+}

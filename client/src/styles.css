@@ -1,0 +1,36 @@
+/*html, body, app-root
+{
+    height: 80%;
+}
+body
+{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+html, body { height: 80%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+*/
+
+/* Global styles being used for entire app */
+
+body {
+    background-image: url("/assets/background/wooden-background-dark.jpg");
+}
+
+p, button {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+th:nth-child(n+1){
+    background-color:rgba(210, 210, 210, 1);
+    font-weight: bold;
+}
+
+.mat-cell, .mat-header-cell {
+    background-color: rgba(255, 254, 254, 0);
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.mat-table {
+    background-color: rgba(255, 255, 255, 0.4);
+}

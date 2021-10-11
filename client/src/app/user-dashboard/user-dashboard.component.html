@@ -1,0 +1,7 @@
+<!-- User dashboard, using spinner until data is loaded. -->
+<div class="dashboard" fxLayout="column" fxLayoutAlign="center center">
+<img src="../../assets/spinner/spinner.gif" *ngIf="loading">
+<h2>Welcome back {{user | uppercase}}!</h2>
+<img id="profileImg" src="{{imgURL}}">
+<p>You have so far added {{nrOfAddedBeers}} beers to your collection.</p>
+</div>

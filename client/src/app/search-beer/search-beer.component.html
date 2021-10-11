@@ -1,0 +1,44 @@
+<div>
+    <!--Create seach bar with filtering from Angular material-->
+    <h2>Search for beers</h2>
+    <mat-form-field style="width: 40vw;">
+        <mat-label>Search...</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex: Stout" #input>
+    </mat-form-field>
+</div>
+<!-- Spinner to show during load -->
+<img id="spinner" src="../../assets/spinner/spinner.gif" *ngIf="loading">
+
+<div id="searchContainer">
+    <!-- Only display table when DB-data is loaded, using material table that takes data as dataSource -->
+    <table *ngIf="dataIsLoaded" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="image">
+            <th mat-header-cell  *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let beer"><img src="{{beer.link}}" alt="beerImage" ></td>
+        </ng-container>
+        <!--Name-->
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>Name</th>
+            <td (click)="newData(beer.id)" mat-cell *matCellDef="let beer">{{beer.name}}</td>
+        </ng-container>
+        <!--type-->
+        <ng-container matColumnDef="type">
+            <th mat-header-cell *matHeaderCellDef>Type</th>
+            <td (click)="newData(beer.id)" mat-cell *matCellDef="let beer">{{beer.type}}</td>
+        </ng-container>
+        <!--Price-->
+        <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef>Price</th>
+            <td (click)="newData(beer.id)" mat-cell *matCellDef="let beer">{{beer.price}}:-</td>
+        </ng-container>
+        <!--Link-->
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky:true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="beerRow"></tr>
+        
+        <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="3">No matching beer "{{input.value}}"</td>
+        </tr>
+    </table>
+    
+</div>

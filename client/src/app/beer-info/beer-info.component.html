@@ -1,0 +1,44 @@
+<!--Div that shows when beer is selected in search and the Add button is pushed-->
+<div *ngIf="addToCollection && !showBeerInfo"   class="addBeerToCollection">
+    <h1>{{beerName}}</h1>
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="1vw"> 
+        <p> Rating: </p> 
+        <div *ngFor="let star of stars" [ngClass]="[star.class]" (click)="selectStar(star.id)">
+            <mat-icon>{{star.icon}}</mat-icon>
+        </div>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="center center">
+        <form [formGroup]="notesForm" (ngSubmit)="addBeerToCollection()">
+            <mat-form-field style="width: 25vw;">
+                <mat-label>Notes</mat-label>
+                <input formControlName="notes" matInput #message maxlength="256" placeholder="Notes" #input> 
+                <mat-hint align="end">{{message.value.length}}/256</mat-hint>
+            </mat-form-field>
+            <div style="padding: 1vw; text-align: center;">
+                <button type="submit" *ngIf="displayButton" mat-raised-button>Save to my collection</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--Div that shows information about the beer. The user can add the beer or get a message that the beer is already in the collection-->
+<div *ngIf="showBeerInfo" fxLayout="column" fxLayoutAlign="center">
+    <div>
+        <h1>{{beerName}}</h1>
+    </div>
+    <div fxFlexAlign="center">
+        <img src="{{beerImg}}">
+    </div>
+    <div>
+        <p>{{beerPrice}}</p>
+        <p>{{beerType}}</p>
+        <p>{{beerTaste}}</p>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="center center">
+        <button (click)="showAddBeerToCollection()" *ngIf="displayButton && !beerAlreadyAdded"  mat-raised-button >Add</button>
+        <p style="color: red;" *ngIf="beerAlreadyAdded">Beer already added!</p>
+    </div>
+</div>
+
+
+

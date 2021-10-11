@@ -1,0 +1,11 @@
+<!-- Rendering entire page, containing routes to static menu, left and right component -->
+<div class="header-flex" fxLayout="row" fxLayoutAlign="end center">
+    <div class="logoDiv" ><h1 class="logoHome">BREW<br>STER</h1></div>
+    <span fxFlex></span>
+    <div class="menu"><app-menu></app-menu></div>
+</div>
+<!--Render the two containers for the left and right content. Content changes depening on what page the user is on-->
+<div>
+    <div class="leftContent" fxLayout="row" fxLayoutAlign="center"><app-left-content></app-left-content></div>
+    <div class="rightContent"><app-right-content ></app-right-content></div>
+</div>

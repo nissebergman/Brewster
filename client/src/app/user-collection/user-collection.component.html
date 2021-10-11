@@ -1,0 +1,28 @@
+<!-- User collection. Spinner to spin while data is loading, does not render until data from DB is fetched -->
+<div id="collectionContainer"> 
+    <img src="../../assets/spinner/spinner.gif" *ngIf="loading">
+    <h2 *ngIf="dataIsLoaded">Your saved beers</h2>
+    <table *ngIf="dataIsLoaded"  mat-table [dataSource]="dataSource" matSort  class="mat-elevation-z8">
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+            <td (click)="newData(beers.id)" mat-cell *matCellDef="let beers">{{beers.name}}</td>
+        </ng-container>
+        <ng-container matColumnDef="type">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Type</th>
+            <td (click)="newData(beers.id)" mat-cell *matCellDef="let beers">{{beers.type}}</td>
+        </ng-container>
+        <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Price</th>
+            <td (click)="newData(beers.id)" mat-cell *matCellDef="let beers">{{beers.price}}:-</td>
+        </ng-container>
+        <ng-container matColumnDef="rating">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Rating</th>
+            <td (click)="newData(beers.id)" mat-cell *matCellDef="let beers">{{beers.rating}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky:true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns" class="beerRow"></tr>
+
+    </table>
+</div>
+ 

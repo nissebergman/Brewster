@@ -1,0 +1,22 @@
+<!--div with mat-card form for signup, button to submit the new user and to login form-->
+<section>
+    <mat-grid-list cols="3">
+        <mat-card style="text-align: center;">
+            <mat-card-title>Signup</mat-card-title>
+            <form [formGroup]="signupForm" (ngSubmit)="createUser()">
+                <mat-form-field>
+                    <mat-label>Username</mat-label>
+                    <input formControlName ="name" matInput>
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input type="password" formControlName="password" matInput>
+                </mat-form-field>
+                <br>
+                <button type="submit" mat-raised-button color="primary">Submit</button>
+                <button type ="button" mat-raised-button color="primary" style="margin-left: 5vw" routerLink="/auth/login">Login</button>
+            </form>
+        </mat-card>
+    </mat-grid-list>
+</section>

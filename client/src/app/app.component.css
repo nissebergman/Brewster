@@ -1,0 +1,19 @@
+/* Import font that is used for logo*/
+@font-face {
+    font-family: "Pirou";
+    src: local("Pirou"), url(../../src/assets/fonts/Pirou/Pirou.otf) format("truetype");
+}
+/* Settings for the logo on the home page */
+.logoHome
+{
+    font-size: 6vw;
+    font-family: "Pirou";
+    color: white;
+    text-align: center;
+    line-height: 6vw;
+    margin-top: 4vw;
+}
+/*Customizing colors for all material tables */
+.mat-cell, .mat-header-cell {
+    background-color: lightgray;
+}

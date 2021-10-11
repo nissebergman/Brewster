@@ -1,0 +1,6 @@
+<h2>Select a profile image</h2>
+<img src="../../assets/spinner/spinner.gif" *ngIf="loading">
+<div class="profile-grid">
+<!-- Render profile imgs from imgURLS variable, put border around the img that currently is in use. -->
+<img (click)="changeImg(img);setFrame()" *ngFor="let img of imgURLS; let i = index" [ngStyle]="{border: i == imgNr ? '2px solid ivory' : ''}" class="profile-img" src="{{img}}">
+</div>

@@ -1,0 +1,30 @@
+img
+{
+    max-width: 3vw;
+    height: auto;
+}
+button:hover
+{
+    background: rgb(235, 235, 235);
+}
+/* Css for rating*/
+.star
+{
+    margin: 0 0;
+    color: #a9a5a5;
+    display: inline-block;
+    cursor: pointer;
+    transition: all .3s;
+    transform: scale(1);
+}
+
+.star-gold
+{
+    color: #ea9e4dee;
+}
+
+p
+{
+    margin: 0;
+}
+

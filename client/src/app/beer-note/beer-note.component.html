@@ -1,0 +1,8 @@
+<!-- ngIf to await info loaded from DB -->
+<div *ngIf="showNotesInfo" fxLayout="column" fxLayoutAlign="center">
+    <h1 fxFlexAlign="center">{{beerName}}</h1>
+    <h4 fxFlexAlign="center">{{beerType}}</h4>
+    <img fxFlexAlign="center" src="{{beerImg}}"  alt="beerImage">
+    <h4 fxFlexAlign="center" style="padding-top: 1.5vw;">Rating: {{beerRating}}/5</h4>
+    <p>Notes: {{beerNotes}}</p>
+</div>

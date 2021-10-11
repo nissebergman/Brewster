@@ -1,0 +1,35 @@
+.logoDiv
+{
+    overflow: hidden;
+    z-index: 100;
+    width: 30vw;
+    height: 20vw;
+
+}
+
+#padder {
+    z-index: 0;
+    overflow: hidden;
+}
+
+.leftContent
+{
+    float: left;
+    border-style: solid;
+    border-radius: 2vw;
+    border-color: black;
+    width: 55%;
+    height: auto;
+    margin-left: 3vw;
+    background-color: rgba(200, 200, 200, 0.6)
+}
+.rightContent
+{
+    float: right;
+    border-style: solid;
+    border-radius: 2vw;
+    border-color: black;
+    width: 30%;
+    height: auto;
+    background-color: rgba(200, 200, 200, 0.6)
+}
