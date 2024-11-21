@@ -1,4 +1,4 @@
-# TDDD27 - Advanced Web programming - Brewster
+# Advanced Web programming - Brewster
 
 ## Project specification
 
